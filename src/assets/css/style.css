@@ -1,0 +1,60 @@
+.comment {
+    margin: auto;
+    border: 3px solid green;
+    padding: 10px;
+    width: 50%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+.comment-author {
+	text-align: left;
+	border-bottom: 1px solid grey;
+}
+.comment-body {
+	text-align: left;
+	min-height: 50px;
+	padding-top: 5px;
+}
+.comment-list{
+
+}
+
+.commentAother {
+	margin: auto;
+    border:2px solid #a22281;
+    padding: 10px;
+    width: 90%;
+    margin-top: 5px;
+    /*margin-bottom: 5px;*/
+    border-radius: 5px;
+}
+.commentText {
+	margin: auto;
+    border:2px solid #a22281;
+    padding: 10px;
+    width: 90%;
+    margin-top: 5px;
+    /*margin-bottom: 5px;*/
+    border-radius: 5px;
+    min-height: 70px;
+}
+
+.commentForm {
+	border:5px solid black;
+	margin: auto;
+    padding: 10px;
+    width: 50%;
+    margin-top: 5px;
+    /*margin-bottom: 5px;*/
+    border-radius: 5px;
+}
+.formHeader{
+
+}
+
+.submitBtn {
+	padding: 7px;
+	border:1px solid #a22281;
+	border-radius: 3px;
+}
