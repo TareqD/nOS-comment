@@ -35,7 +35,7 @@ const styles = {
   }
 };
 
-const scriptHashInternal = "c77194e0152042c3fc8f28336183302a03d8acf7";
+const scriptHashInternal = "8adddd373b6f98b35927f13901f16a9cc38aacf7";
 
 class Comments extends React.Component {
 
@@ -46,7 +46,7 @@ class Comments extends React.Component {
               { id: '1', author: 'auther 1', text: 'comment from the array'},
               { id: '2', author: 'auther 2', text: 'text text text text'}
           ],
-            scriptHash:'c77194e0152042c3fc8f28336183302a03d8acf7',
+            scriptHash:'8adddd373b6f98b35927f13901f16a9cc38aacf7',
             'id':3134
         }
         this.addComment = this.addComment.bind(this);
@@ -60,21 +60,17 @@ class Comments extends React.Component {
 
 
     QueryLatestSavedCommentAttributes() {
+        // becuase its not functioning at the mean time.
+        return;
         console.log('Quering the comment');
         const interval = setInterval(async () => {
-            // console.log("With has " + scriptHashInternal);
             try {
 
                 const opponentHashKey = u.str2hexstring(`new_comment_id`);
-                console.log("----- has " + opponentHashKey);
                 const itemAnswer = await this.props.nos.getStorage({
                     scriptHash: scriptHashInternal,
                     key: opponentHashKey
                 });
-
-                    // .then((data) => console.log(`Get storage data: ${data} `))
-                    // .catch((err) => console.log(`Error: ${err.message}`))
-                ;
             } catch (e) {
                 console.log('hello from eee' + e.toString());
                 console.error("wait winner error:" + e.toString());
@@ -152,7 +148,7 @@ class Comments extends React.Component {
 
                         console.log(JSON.stringify(txid));
                         this.fetchComments();
-                        // alert(`Invoke tx id: ${txid}`)
+                         alert(`Invoke tx id: ${txid}`)
                     }
 
                 ).catch(
@@ -162,13 +158,6 @@ class Comments extends React.Component {
 
         // this.setState({comments:[...this.state.comments.slice(), obj]});
     }
-
-
-    handleClaimGas = () =>
-        this.props.nos
-            .claimGas()
-            .then(alert)
-            .catch(alert);
 
     render(){
       
