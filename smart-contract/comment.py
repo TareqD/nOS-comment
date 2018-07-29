@@ -2,7 +2,7 @@ from boa.interop.Neo.Runtime import Log
 from boa.interop.Neo.Storage import GetContext, Put, Get
 from boa.builtins import concat, list
 
-
+# Some of the code is taken from rsp-smart-contract for teh game server, cause I wanted something to start with.
 def Main(operation, args):
     if operation == 'PostComment':
         return post_comment(args[0], args[1], args[2], args[3])
